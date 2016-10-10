@@ -1,7 +1,7 @@
 # app/controllers/pages_controller.rb
 class PagesController < ApplicationController
   def home
-    render 'pages/home'
+    render 'hello/world'
   end
 
   def about
