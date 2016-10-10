@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   end
 
   def about
+    # two way to get name variables
+    params[:name]   # => bigman
+    params['name']  # => bigman
   end
   # when Get /math run
   def math
