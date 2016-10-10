@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-
-  get 'pages/about'
+  # get 'pages/home' # = get 'home', to: 'pages#home'
+  #
+  # get 'pages/about'
 
   root 'pages#home' # root
   # get '/', to: 'pages/home' # it's root too
