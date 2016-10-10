@@ -4,8 +4,7 @@ class PagesController < ApplicationController
 
   def about
     # two way to get name variables
-    params[:name]   # => bigman
-    params['name']  # => bigman
+    @name = "#{params[:first_name]} #{params['last_name']}"
   end
   # when Get /math run
   def math
