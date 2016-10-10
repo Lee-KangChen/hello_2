@@ -8,11 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/math">Lotto</a></li>
-  </ul>
+  <%= render 'shared/navbar', line_number: 3 %>
 <%= yield %>
 
 </body>
