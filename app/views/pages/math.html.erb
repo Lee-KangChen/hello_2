@@ -1,0 +1,6 @@
+<!-- app/views/pages/math.html.erb -->
+<% a = 1 %>           <!-- run, no display -->
+<% b = 2 %>           <!-- run, no display -->
+<%# c = 1 %>           <!-- no run, no display -->
+<h1><%= a + b %></h1>  <!-- display 3 -->
+<h1><%%= a + b %></h1>  <!-- no run, take lefe a % then display -->
