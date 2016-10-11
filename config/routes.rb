@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   root 'pages#home' # root
   # get '/', to: 'pages/home' # it's root too
-  get :home, :math, controller: :pages
-  get :about, controller: :pages, path: :me
+  get :home, :math, :about, :form, controller: :pages
+  post :about, controller: :pages
   # get 'home', to: 'pages#home'
   # get 'about/me', to: 'pages#about'
 
