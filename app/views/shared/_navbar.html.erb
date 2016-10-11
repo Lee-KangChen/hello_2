@@ -1,8 +1,8 @@
 <!-- app/views/shared/_navbar.html.erb -->
 <ul>
-  <li><a href="<%= root_path %>">Home</a></li>
-  <li><a href="<%= about_path %>">About</a></li>
-  <li><a href="<%= math_path %>">Lotto</a></li>
+  <li><%= link_to 'Home', root_path %></li>
+  <li><%= link_to 'About', about_path %></li>
+  <li><%= link_to 'Lotto', math_path %></li>
 </ul>
 <% line_number.times do %>
   <hr>
