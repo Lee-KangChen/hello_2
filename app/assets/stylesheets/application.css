@@ -1,4 +1,13 @@
+/* app/assets/stylesheets/application.css */
 /*
+  *= require_self
+  *= require_tree .
+  */
+  li.active > a{
+    font-size: 200%;
+    color: red;
+  }
+/*  
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
