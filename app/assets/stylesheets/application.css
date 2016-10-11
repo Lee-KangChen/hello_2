@@ -1,13 +1,12 @@
 /* app/assets/stylesheets/application.css */
-ul > li { display: inline; }
-/*
-  *= require_self
-  *= require_tree .
-  */
-  li.active > a{
-    font-size: 200%;
-    color: red;
-  }
+li.active > a{
+  font-size: 200%;
+  color: red;
+}
+ul > li {
+  display: inline;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

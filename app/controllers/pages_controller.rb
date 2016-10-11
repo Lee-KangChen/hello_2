@@ -5,7 +5,8 @@ class PagesController < ApplicationController
   def about
     # two way to get name variables
     @name = params["name"]
-    render layout: 'admin' # assign layout
+    # render layout: 'admin' # assign layout ;comment to default
+
   end
   # when Get /math run
   def math
