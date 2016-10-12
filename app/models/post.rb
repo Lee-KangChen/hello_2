@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # app/models/post.rb
 class Post < ActiveRecord::Base
   validates :title, :content, presence: true
@@ -5,7 +6,7 @@ class Post < ActiveRecord::Base
 
   def title_must_start_with_x
     unless title.to_s.start_with? 'X'
-      errors.add(:title, 'please must start with "X"')
+      errors.add(:title, '必須是「X」開頭')
     end
   end
 end
