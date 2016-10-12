@@ -1,6 +1,8 @@
 # encoding: UTF-8
 # app/models/post.rb
 class Post < ActiveRecord::Base
+  belongs_to :user
+
   validates :title, :content, presence: true
   before_validation :set_content_form_title
 
