@@ -1,13 +1,15 @@
 # config/routes.rb
 Rails.application.routes.draw do
-  # get 'pages/home' # = get 'home', to: 'pages#home'
-  #
-  # get 'pages/about'
-  resources :psots, :user
   root 'pages#home' # root
   # get '/', to: 'pages/home' # it's root too
   get :home, :math, :about, :form, controller: :pages
   post :about, controller: :pages
+  resources :posts
+
+  # get 'pages/home' # = get 'home', to: 'pages#home'
+  #
+  # get 'pages/about'
+
   # get 'home', to: 'pages#home'
   # get 'about/me', to: 'pages#about'
 
