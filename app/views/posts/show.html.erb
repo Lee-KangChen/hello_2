@@ -3,4 +3,5 @@
 <h1><%= @post.title %></h1>
   <%= @post.content %>
 <hr>
-<%= link_to 'Back', posts_path %>
+<%= nav_li 'Edit Post', edit_post_path %>
+<%= nav_li 'Back', posts_path %>

@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
-  # GET /posts
+# GET /posts
   def index
     @posts = Post.all
   end
-  # GET /posts/:id
+# GET /posts/:id
   def show
     @post = Post.find(params[:id])
   end
-  # POST /posts
+# POST /posts
   def create
     @post = Post.new post_params
 
@@ -20,8 +20,18 @@ class PostsController < ApplicationController
 
   def new
   end
-
+# GET /posts/:id/edit
   def edit
+    @post = Post.find(params[:id])
+  end
+# PUT /posts/:id
+  def update
+    @post = Post.find(params[:id])
+    if @post.update post_params
+      redirect_to @post
+    else
+      render :edit
+    end
   end
 
   private
