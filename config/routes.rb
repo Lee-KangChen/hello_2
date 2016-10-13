@@ -1,5 +1,6 @@
 # config/routes.rb
 Rails.application.routes.draw do
+  resources :categories
   root 'pages#home' # root
   # get '/', to: 'pages/home' # it's root too
   get :home, :math, :about, :form, controller: :pages
