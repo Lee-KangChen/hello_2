@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update]
 # GET /posts
   def index
     @posts = Post.all
   end
 # GET /posts/:id
   def show
-    @post = Post.find(params[:id])
   end
 # POST /posts
   def create
@@ -19,14 +19,13 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 # GET /posts/:id/edit
   def edit
-    @post = Post.find(params[:id])
   end
 # PUT /posts/:id
   def update
-    @post = Post.find(params[:id])
     if @post.update post_params
       redirect_to @post
     else
@@ -35,6 +34,10 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
   def post_params
     params.require(:post).permit(:title, :content)
