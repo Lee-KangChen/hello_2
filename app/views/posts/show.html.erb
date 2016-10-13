@@ -4,4 +4,5 @@
   <%= @post.content %>
 <hr>
 <%= nav_li 'Edit Post', edit_post_path %>
+<%= link_to 'Delete', @post, method: :delete %>
 <%= nav_li 'Back', posts_path %>
