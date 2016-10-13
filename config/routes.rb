@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # get 'pages/home' # = get 'home', to: 'pages#home'
   #
   # get 'pages/about'
-
+  resources :psots, :user
   root 'pages#home' # root
   # get '/', to: 'pages/home' # it's root too
   get :home, :math, :about, :form, controller: :pages
