@@ -9,13 +9,16 @@
   <%= nav_li 'Category', categories_path %>
 </ul>
 
-<%= form_tag session_path do %>
-  <input type="text" name="email">
-  <input type="password" name="password">
-  <input type="submit" value="Sign in">
+<% if user_signed_in? %>
+  Hello, <%= current_user.name %> |
+  <%= link_to "logout", session_path, method: :destroy %>
+<% else %>
+  <%= form_tag session_path do %>
+    <input type="text" name="email">
+    <input type="password" name="password">
+    <input type="submit" value="login">
+  <% end %>
 <% end %>
-<%= link_to "Sign out", session_path, method: :delete %>
-
 <% line_number.times do %>
   <hr>
 <% end %>
