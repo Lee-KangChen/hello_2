@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
   def user_signed_in?
     current_user != nil
   end
+
+  def authenticate_user!
+    unless user_signed_in?
+      redirect_to request.referer, notice: 'Pleast login'
+  end
 end
