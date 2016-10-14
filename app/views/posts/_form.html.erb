@@ -1,6 +1,9 @@
 <!-- app/views/posts/_form.html.erb -->
 <%= form_for @post do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :content %>
+  title: <%= f.text_field :title %><br>
+  content: <%= f.text_area :content %><br>
+  <%= f.collection_select :user_id, User.all, :id, :name %>
+  <br>
+  <%= f.collection_check_boxes :tag_ids , Tag.all, :id, :name %>
   <%= f.submit %>
 <% end  %>
