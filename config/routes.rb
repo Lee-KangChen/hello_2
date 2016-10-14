@@ -1,5 +1,6 @@
 # config/routes.rb
 Rails.application.routes.draw do
+  resource :session, only: [:create, :destroy]
   resources :categories
   root 'pages#home' # root
   # get '/', to: 'pages/home' # it's root too

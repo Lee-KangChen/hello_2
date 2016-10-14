@@ -8,6 +8,14 @@
   <%= nav_li 'New Post', new_post_path %>
   <%= nav_li 'Category', categories_path %>
 </ul>
+
+<%= form_tag session_path do %>
+  <input type="text" name="email">
+  <input type="password" name="password">
+  <input type="submit" value="Sign in">
+<% end %>
+<%= link_to "Sign out", session_path, method: :delete %>
+
 <% line_number.times do %>
   <hr>
 <% end %>
